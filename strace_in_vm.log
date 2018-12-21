@@ -1,0 +1,392 @@
+execve("./thttpd", ["./thttpd", "-C", "/usr/local/www/thttpd_config", "-u", "root", "-D"], [/* 18 vars */]) = 0
+brk(0)                                  = 0x8591000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ee000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=81966, ...}) = 0
+mmap2(NULL, 81966, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb76d9000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0P\234\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+mmap2(NULL, 1763964, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb752a000
+mprotect(0xb76d2000, 4096, PROT_NONE)   = 0
+mmap2(0xb76d3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb76d3000
+mmap2(0xb76d6000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb76d6000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7529000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb7529940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb76d3000, 8192, PROT_READ)   = 0
+mprotect(0x8060000, 4096, PROT_READ)    = 0
+mprotect(0xb7714000, 4096, PROT_READ)   = 0
+munmap(0xb76d9000, 81966)               = 0
+socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_LOCAL, sun_path="/dev/log"}, 110) = 0
+brk(0)                                  = 0x8591000
+brk(0x85b2000)                          = 0x85b2000
+open("/usr/local/www/thttpd_config", O_RDONLY) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=112, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ed000
+read(4, "dir=/usr/local/www/data\nchroot\nc"..., 4096) = 112
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+munmap(0xb76ed000, 4096)                = 0
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ed000
+read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0\0\0\0"..., 4096) = 3519
+_llseek(4, -24, [3495], SEEK_CUR)       = 0
+read(4, "\nEST5EDT,M3.2.0,M11.1.0\n", 4096) = 24
+close(4)                                = 0
+munmap(0xb76ed000, 4096)                = 0
+open("/etc/gai.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2584, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=2584, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ed000
+read(4, "# Configuration for getaddrinfo("..., 4096) = 2584
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+munmap(0xb76ed000, 4096)                = 0
+socket(PF_NETLINK, SOCK_RAW, 0)         = 4
+bind(4, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(4, {sa_family=AF_NETLINK, pid=15333, groups=00000000}, [12]) = 0
+time(NULL)                              = 1545071612
+sendto(4, "\24\0\0\0\26\0\1\3\374\353\27\\\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(4, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"L\0\0\0\24\0\2\0\374\353\27\\\345;\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(4, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"H\0\0\0\24\0\2\0\374\353\27\\\345;\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(4, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\374\353\27\\\345;\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+connect(5, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(5)                                = 0
+close(4)                                = 0
+socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP) = 4
+connect(4, {sa_family=AF_INET6, sin6_port=htons(80), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+getsockname(4, {sa_family=AF_INET6, sin6_port=htons(42988), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(4, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+getsockname(4, {sa_family=AF_INET6, sin6_port=htons(56412), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+close(4)                                = 0
+getuid32()                              = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=507, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ed000
+read(4, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 507
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+munmap(0xb76ed000, 4096)                = 0
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=81966, ...}) = 0
+mmap2(NULL, 81966, PROT_READ, MAP_PRIVATE, 4, 0) = 0xb76d9000
+close(4)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libnss_compat.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p\16\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0644, st_size=30560, ...}) = 0
+mmap2(NULL, 33356, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0xb7520000
+mmap2(0xb7527000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x6000) = 0xb7527000
+close(4)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libnsl.so.1", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\3201\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0644, st_size=92036, ...}) = 0
+mmap2(NULL, 100328, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0xb7507000
+mmap2(0xb751c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x15000) = 0xb751c000
+mmap2(0xb751e000, 6120, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb751e000
+close(4)                                = 0
+mprotect(0xb751c000, 4096, PROT_READ)   = 0
+mprotect(0xb7527000, 4096, PROT_READ)   = 0
+munmap(0xb76d9000, 81966)               = 0
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=81966, ...}) = 0
+mmap2(NULL, 81966, PROT_READ, MAP_PRIVATE, 4, 0) = 0xb76d9000
+close(4)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libnss_nis.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\31\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0644, st_size=42668, ...}) = 0
+mmap2(NULL, 45632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0xb74fb000
+mmap2(0xb7505000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x9000) = 0xb7505000
+close(4)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\32\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0644, st_size=42716, ...}) = 0
+mmap2(NULL, 45812, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0xb74ef000
+mmap2(0xb74f9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x9000) = 0xb74f9000
+close(4)                                = 0
+mprotect(0xb74f9000, 4096, PROT_READ)   = 0
+mprotect(0xb7505000, 4096, PROT_READ)   = 0
+munmap(0xb76d9000, 81966)               = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+_llseek(4, 0, [0], SEEK_CUR)            = 0
+fstat64(4, {st_mode=S_IFREG|0644, st_size=1969, ...}) = 0
+mmap2(NULL, 1969, PROT_READ, MAP_SHARED, 4, 0) = 0xb76ed000
+_llseek(4, 1969, [1969], SEEK_SET)      = 0
+munmap(0xb76ed000, 1969)                = 0
+close(4)                                = 0
+open("/usr/local/www/logs/thttpd_log", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=103978, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ed000
+fstat64(4, {st_mode=S_IFREG|0644, st_size=103978, ...}) = 0
+_llseek(4, 103978, [103978], SEEK_SET)  = 0
+fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
+getuid32()                              = 0
+fchown32(4, 0, 0)                       = 0
+chdir("/usr/local/www/data")            = 0
+getcwd("/usr/local/www/data", 4096)     = 20
+setsid()                                = 15333
+open("/var/run/thttpd.pid", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+getpid()                                = 15333
+fstat64(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ec000
+write(5, "15333\n", 6)                  = 6
+close(5)                                = 0
+munmap(0xb76ec000, 4096)                = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=4*1024}) = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=4*1024}) = 0
+setrlimit(RLIMIT_NOFILE, {rlim_cur=4*1024, rlim_max=4*1024}) = 0
+chroot("/usr/local/www/data/")          = 0
+time(NULL)                              = 1545071612
+send(3, "<28>Dec 17 13:33:32 thttpd[15333"..., 108, MSG_NOSIGNAL) = 108
+write(2, "./thttpd: logfile is not within "..., 84) = 84
+chdir("/")                              = 0
+rt_sigaction(SIGTERM, {0x8049bed, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [TERM], [], 8) = 0
+rt_sigaction(SIGINT, {0x8049bed, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [INT], [], 8) = 0
+rt_sigaction(SIGCHLD, {0x8049c24, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGPIPE, {SIG_IGN, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [PIPE], [], 8) = 0
+rt_sigaction(SIGHUP, {0x8049ce3, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [HUP], [], 8) = 0
+rt_sigaction(SIGUSR1, {0x8049d09, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [USR1], [], 8) = 0
+rt_sigaction(SIGUSR2, {0x8049d4e, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [USR2], [], 8) = 0
+rt_sigaction(SIGALRM, {0x8049d76, [], 0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [ALRM], [], 8) = 0
+alarm(360)                              = 0
+uname({sys="Linux", node="shenliu-Ubuntu1432", ...}) = 0
+socket(PF_INET6, SOCK_STREAM, IPPROTO_IP) = 5
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+setsockopt(5, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(5, {sa_family=AF_INET6, sin6_port=htons(80), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+fcntl64(5, F_GETFL)                     = 0x2 (flags O_RDWR)
+fcntl64(5, F_SETFL, O_RDWR|O_NONBLOCK)  = 0
+listen(5, 1024)                         = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 6
+fcntl64(6, F_SETFD, FD_CLOEXEC)         = 0
+setsockopt(6, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(6, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("0.0.0.0")}, 16) = -1 EADDRINUSE (Address already in use)
+time(NULL)                              = 1545071612
+send(3, "<26>Dec 17 13:33:32 thttpd[15333"..., 72, MSG_NOSIGNAL) = 72
+close(6)                                = 0
+open("/proc/meminfo", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1545071612
+send(3, "<29>Dec 17 13:33:32 thttpd[15333"..., 76, MSG_NOSIGNAL) = 76
+gettimeofday({1545071612, 451224}, NULL) = 0
+gettimeofday({1545071612, 451242}, NULL) = 0
+gettimeofday({1545071612, 451258}, NULL) = 0
+time(NULL)                              = 1545071612
+getuid32()                              = 0
+setgroups32(0, [])                      = 0
+setgid32(0)                             = 0
+open("/proc/sys/kernel/ngroups_max", O_RDONLY) = -1 ENOENT (No such file or directory)
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+connect(6, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(6)                                = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+connect(6, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(6)                                = 0
+open("/etc/group", O_RDONLY|O_CLOEXEC)  = -1 ENOENT (No such file or directory)
+setgroups32(1, [0])                     = 0
+setuid32(0)                             = 0
+mmap2(NULL, 393216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb748f000
+gettimeofday({1545071612, 451897}, NULL) = 0
+poll([{fd=5, events=POLLIN}], 1, 5000)  = 1 ([{fd=5, revents=POLLIN}])
+gettimeofday({1545071615, 506997}, NULL) = 0
+accept(5, {sa_family=AF_INET6, sin6_port=htons(56710), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 6
+fcntl64(6, F_SETFD, FD_CLOEXEC)         = 0
+fcntl64(6, F_GETFL)                     = 0x2 (flags O_RDWR)
+fcntl64(6, F_SETFL, O_RDWR|O_NONBLOCK)  = 0
+accept(5, 0xbfb37a3c, [128])            = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=5, events=POLLIN}, {fd=6, events=POLLIN}], 2, 1945) = 1 ([{fd=6, revents=POLLIN}])
+gettimeofday({1545071615, 507673}, NULL) = 0
+read(6, "GET /ray.jpg HTTP/1.1\r\nUser-Agen"..., 600) = 114
+stat64("ray.jpg", {st_mode=S_IFREG|0444, st_size=1023826, ...}) = 0
+stat64("ray.jpg", {st_mode=S_IFREG|0444, st_size=1023826, ...}) = 0
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 11), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76ec000
+write(1, "DEBUG: auth_check2 call site 2(r"..., 39) = 39
+write(1, "================ dumpRPCbuf BEGI"..., 54) = 54
+write(1, "shc->global_passwd:0\n", 21)  = 21
+write(1, "shc->vhost:0\n", 13)          = 13
+write(1, "shc->maxremoteuser:200\n", 23) = 23
+write(1, "shc->method:1\n", 14)         = 14
+write(1, "shc->should_linger:1\n", 21)  = 21
+write(1, "shc->status:0\n", 14)         = 14
+write(1, "shc->mime_flag:1\n", 17)      = 17
+write(1, "shc->got_range:0\n", 17)      = 17
+write(1, "shc->maxresponse:200\n", 21)  = 21
+write(1, "shc->responselen:0\n", 19)    = 19
+write(1, "shc->first_byte_index:0\n", 24) = 24
+write(1, "shc->last_byte_index:-1\n", 24) = 24
+write(1, "shc->bytes_to_send:0\n", 21)  = 21
+write(1, "shc->range_if:-1\n", 17)      = 17
+write(1, "shc->dirname:.\n", 15)        = 15
+write(1, "shc->authorization:\n", 20)   = 20
+write(1, "shc->hostdir:\n", 14)         = 14
+write(1, "shc->remoteuser:\n", 17)      = 17
+write(1, "shc->encodedurl:/ray.jpg\n", 25) = 25
+write(1, "shc->useragent:Wget/1.15 (linux-"..., 37) = 37
+write(1, "shc->charset:UTF-8\n", 19)    = 19
+write(1, "shc->protocol:HTTP/1.1\n", 23) = 23
+write(1, "shc->p3p:\n", 10)             = 10
+write(1, "shc->response:\n", 15)        = 15
+write(1, "================ dumpRPCbuf END "..., 52) = 52
+open("/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+uname({sys="Linux", node="shenliu-Ubuntu1432", ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/i686", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/tls", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/i686", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i386-linux-gnu", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/i686", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/tls", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/i686", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i386-linux-gnu", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/i686", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/sse2", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/cmov", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls", 0xbfb368f0)          = -1 ENOENT (No such file or directory)
+open("/lib/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/lib/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i686/sse2", 0xbfb368f0)    = -1 ENOENT (No such file or directory)
+open("/lib/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i686/cmov", 0xbfb368f0)    = -1 ENOENT (No such file or directory)
+open("/lib/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/i686", 0xbfb368f0)         = -1 ENOENT (No such file or directory)
+open("/lib/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/sse2/cmov", 0xbfb368f0)    = -1 ENOENT (No such file or directory)
+open("/lib/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/sse2", 0xbfb368f0)         = -1 ENOENT (No such file or directory)
+open("/lib/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/cmov", 0xbfb368f0)         = -1 ENOENT (No such file or directory)
+open("/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib", 0xbfb368f0)              = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/i686", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/tls", 0xbfb368f0)      = -1 ENOENT (No such file or directory)
+open("/usr/lib/i686/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i686/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i686/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i686/sse2", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i686/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i686/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/i686/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/i686", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/usr/lib/sse2/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/sse2/cmov", 0xbfb368f0) = -1 ENOENT (No such file or directory)
+open("/usr/lib/sse2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/sse2", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/usr/lib/cmov/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib/cmov", 0xbfb368f0)     = -1 ENOENT (No such file or directory)
+open("/usr/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib", 0xbfb368f0)          = -1 ENOENT (No such file or directory)
+open("/etc/protocols", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+write(1, "Can't establish connection with "..., 39) = 39
+write(2, "127.0.0.1: RPC: Unknown protocol"..., 33) = 33
+exit_group(2)                           = ?
++++ exited with 2 +++
